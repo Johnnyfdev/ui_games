@@ -2,8 +2,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-import 'widgets/buttons/3d_button.dart';
-import 'widgets/loading/bar_3d_indicator.dart';
+import 'widgets/buttons/game_3d_button.dart';
+import 'widgets/loading/game_3d_bar_indicator.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,12 +15,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'UI Games',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'UI Games'),
     );
   }
 }
@@ -62,10 +62,10 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       extendBody: true,
       bottomNavigationBar: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16),
+        padding: const EdgeInsets.all(16),
         child: SafeArea(
           child: Game3DButton.text(
-            text: 'Button 1',
+            text: 'Click me!',
             color: const Color(0xff76C23B),
             shadowColor: const Color.fromARGB(255, 76, 130, 35),
             onPressed: () {
